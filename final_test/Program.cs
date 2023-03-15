@@ -29,3 +29,16 @@ string[] ThreeCharArray(string[] array)
     }    
     return FinalArray;
 }
+
+void PrintArray(string[] printArr)
+{
+    Console.Write("[");
+    for (int i = 0; i < printArr.Length; i++)
+    {
+        if (i == printArr.Length - 1)
+            Console.Write($"\"{printArr[i]}\"");
+        else
+            Console.Write($"\"{printArr[i]}\", ");
+    }
+    Console.WriteLine("]");
+}
