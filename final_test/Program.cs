@@ -1,4 +1,4 @@
-﻿string[] UserInputArray(int num)
+﻿string[] InputArray(int num)
 {
     string[] array = new string[num];
     for (int i = 0; i < array.Length; i++)
@@ -42,3 +42,19 @@ void PrintArray(string[] printArr)
     }
     Console.WriteLine("]");
 }
+
+Console.WriteLine("Введите массив строк :");
+Console.WriteLine("Сколько будет строк в изначальном массиве?");
+Console.Write(">>: ");
+int.TryParse(Console.ReadLine(), out int num);
+while (num <= 0)
+{
+    Console.WriteLine("Число меньше 1! Введите заново: ");
+    int.TryParse(Console.ReadLine(), out num);
+}
+string[] array = InputArray(num);
+string[] threeCharArray = ThreeCharArray(array);
+Console.WriteLine("Изначальный массив:");
+PrintArray(array);
+Console.WriteLine("Полученный массив:");
+PrintArray(threeCharArray);
